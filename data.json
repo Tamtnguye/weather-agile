@@ -1,0 +1,15 @@
+{
+    "users": {
+        "john": {
+            "password": "",
+            "token": "",
+            "current_user": false
+        },
+        "jaime": {
+            "password": "",
+            "token": "",
+            "history": [],
+            "current_user": false
+        }
+    }
+}
