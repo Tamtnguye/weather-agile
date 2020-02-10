@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
     res.redirect("/log_in.html")
 });
 // Middleware for express
+app.use(express.static(__dirname + "/signon"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
