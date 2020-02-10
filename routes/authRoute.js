@@ -7,7 +7,7 @@ const passport = require("../middleware/passport");
 const router = express.Router();
 
 // localhost:8081/auth/login
-router.post("/log_in", (req, res) => {
+router.post("./auth/log_in", (req, res) => {
     passport.authenticate("local", { session: false}, (err, user, info) => {
         console.log(err);
         if (err || ! user) {
