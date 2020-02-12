@@ -24,12 +24,18 @@ app.use(express.static(__dirname + "/signon"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
+
 // Initialize Passport
 app.use(passport.initialize());
 
 app.use("/auth", authRoute);
 app.use("/user", passport.authenticate("jwt", { session: false}), userRoute);
 // TODO add user route
+
+app.post('/auth', function (req, res) {
+    console.log(req.body);
+    res.sendFile('./signon/app.html', {root: __dirname });
+  });
 
 
 app.listen(PORT, () => {
